@@ -59,10 +59,6 @@ DecisionHub enables business analysts to instantly prototyping and execute sophi
 ![Decision-Hub drawio (3)](https://github.com/Abhishek-Mallick/Decision-Hub/assets/106394426/1d760f38-0111-4c47-889c-3f63a892fba2)
 
 
-## Wireframe
-![archi](https://github.com/Abhishek-Mallick/Decision-Hub/assets/90705452/9ec2a192-a7c4-4305-899f-bc3e82ebaa26)
-
-
 ## Contribution
 
 ```
