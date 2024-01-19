@@ -1,0 +1,5 @@
+Flask
+Flask-SQLAlchemy
+google
+google-api-python-client
+google-api-core

@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+    <meta charset="utf-8">
+    <meta http-equiv="Accept-CH" content="DPR">
+
+    <title>DecisionHub</title>
+
+    <link rel="icon" href="../static/images/database-solid.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../static/css/cleanstyles/index_clean.css" > 
+
+</head>
+
+<body>
+    <div>
+        <div style="position: sticky; top: 0px; z-index: 9999; width: 100%;">
+            <nav role="navigation" class="cssNav">
+
+                <a href="{{url_for('index')}}" class="cssUrl"> 
+                    <img src="static/images/dhublogo.png" style="width: 17rem; height: 3rem; margin-top: -0.5rem;" alt="DecisionHublogo" class="css-c32ty2" />
+                </a>
+                
+                <div class="CssTop">
+                    <ul>
+                        <li>
+                            <button tabIndex="0" data-track="true" class="cssbot">
+                                <span class="textlink-default-text-class">
+                                    <div style="margin-left: 5px; padding-left: 10px;"><a style="text-decoration: none; color: #000000;" href="#service">Services</a>
+                                    </div>
+                                </span>
+                                </button>
+                           
+                        </li>
+                        <li class="header-nav-menu-item ">
+                            <a tabIndex="0" href="{{url_for('about')}}"data-track="true" class="css-3wsupk"><span class="css-1edz58y">
+                                <span class="textlink-default-text-class ">About</span></span>
+                            </a>
+                        </li>
+                        {% if username %}
+
+                        <li class="header-nav-menu-item css-2ath6f">
+                        
+                            <button tabIndex="0" data-track="true" class="css-3wsupk"><span class="css-1edz58y"><span
+                                        class="textlink-default-text-class css-aq3x7l">
+                                        <div style="margin-left: 20px; padding-left: 10px;">
+                                            <a style="text-decoration: none; color: #000000;" href="{{url_for('dashboard')}}">Dashboard</a>
+                                        </div>
+                                    </span></span>
+                            </button>
+                          
+                        </li>
+
+                        {% endif %}
+                        
+                        <div class="css-n8sm7x">
+                        
+                            <div class="css-1myrko">
+                                
+                                {% if username %}
+    
+                                <button tabIndex="0" data-track="true" class="header-desktop-button css-xtl1sx"><i class="fa-solid fa-user"></i> {{username}}</button>
+    
+                                {% else %}
+    
+                                <a tabIndex="0" href="{{url_for('login')}}" data-track="true" class="header-desktop-button css-xtl1sx">Sign in</a>
+    
+                                {% endif %}
+    
+                               
+                            </div>
+                            
+                        </div>
+                        
+                    </ul>
+                    
+                    
+                </div>
+
+            </nav>
+        </div>
+        
+        <div class="css-18g2si4">
+            <div class="css-1r84kvf">
+                <span class=" css-z7exat"><span>We have all the resources you need to see how our developer data platform actually works.</span></span>
+            </div>
+        </div>
+        
+        <div aria-label="flex-container" class="css-8bmn33">
+                    
+            <div class="css-1fvxmpx">
+                
+                <div target="_self" data-track="true" class=" css-1amomaf">
+                    
+                    <div aria-label="card-header" class="css-180x1vp">
+                        <img
+                            src="https://webimages.com/_com_assets/icons/general_action_read.svg"
+                            alt="general_action_read" class=" css-bf2b28" />
+                    </div>
+                    <div class="css-cqkn2k">
+                        
+                        <div class="css-urdtjr">
+                            <p class=" css-5hsn6b"><span>Rule Builder: No-code, intuitive interface,
+                                    integrates LLM for transforming plain text into actionable queries,
+                                    simplifying technological complexities.</span></p>
+                        </div>                                        
+                    </div>
+                </div>
+            </div>
+            <div class="css-1fvxmpx">
+                <div  data-track="true" class=" css-1amomaf">
+                    <div aria-label="card-header" class="css-180x1vp"><img
+                            src="https://webimages.com/_com_assets/icons/general_content_community.svg"
+                            alt="general_content_community" class=" css-bf2b28" /></div>
+                    <div class="css-cqkn2k">
+                        <div class="css-urdtjr">
+                            <div class="css-1nf3kue">
+                                <h3 class=" css-2z5up9">Excel-Like Logic Support</h3>
+                            </div>
+                            <p class=" css-5hsn6b"><span>Our app eases Business Analysts' transition by
+                                    allowing Excel-like logic, converting arithmetic expressions into
+                                    rules for seamless familiarity. </span></p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="css-1fvxmpx">
+                <div  data-track="true" class=" css-1amomaf">
+                    <div aria-label="card-header" class="css-180x1vp"><img
+                            src="https://webimages/_com_assets/icons/realm_sync.svg"
+                            alt="general_content_community" class=" css-bf2b28" /></div>
+                    <div class="css-cqkn2k">
+                        <div class="css-urdtjr">
+                            <div class="css-1nf3kue">
+                                <h3 class=" css-2z5up9">Modification | Testing</h3>
+                            </div>
+                            <p class=" css-5hsn6b"><span>DecisionHub enables analysts to swiftly modify
+                                    and test decision strategies, offering a user-friendly interface for
+                                    real-time adjustments, reducing errors amid evolving business
+                                    requirements.</span></p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="css-1fvxmpx">
+                <div 
+                    data-track="true" class=" css-1amomaf">
+                    <div aria-label="card-header" class="css-180x1vp"><img
+                            src="https://webimages.com/_com_assets/icons/general_content_learn.svg"
+                            alt="general_content_learn" class=" css-bf2b28" /></div>
+                    <div class="css-cqkn2k">
+                        <div class="css-urdtjr">
+                            <div class="css-1nf3kue">
+                                <h3 class=" css-2z5up9">Efficient Logic Checking</h3>
+                            </div>
+                            <p class=" css-5hsn6b"><span>Our app simplifies managing numerous rules with
+                                    a user-friendly interface for swift logic checks, allowing quick
+                                    identification of potential issues.</span></p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="css-1fvxmpx">
+                <div 
+                    target="_self" data-track="true" class=" css-1amomaf">
+                    <div aria-label="card-header" class="css-180x1vp"><img
+                            src="https://webimages.com/_com_assets/icons/atlas_database.svg"
+                            alt="general_content_learn" class=" css-bf2b28" /></div>
+                    <div class="css-cqkn2k">
+                        <div class="css-urdtjr">
+                            <div class="css-1nf3kue">
+                                <h3 class=" css-2z5up9">Visualizer</h3>
+                            </div>
+                            <p class=" css-5hsn6b"><span>DecisionHub enables seamless database uploads, intuitive data visualization, and on-the-fly query execution, empowering users to generate insightful plots and trace data with ease.</span></p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="css-1fvxmpx">
+                <dev 
+                    target="_self" data-track="true" class=" css-1amomaf">
+                    <div aria-label="card-header" class="css-180x1vp"><img
+                            src="https://webimages.com/_com_assets/icons/atlas_data_federation.svg"
+                            alt="general_content_learn" class=" css-bf2b28" /></div>
+                    <div class="css-cqkn2k">
+                        <div class="css-urdtjr">
+                            <div class="css-1nf3kue">
+                                <h3 class=" css-2z5up9">User History</h3>
+                            </div>
+                            <p class=" css-5hsn6b"><span>DecisionHub empowers business analysts to securely save and manage relevant details, providing records of user interactions and data modifications.</span></p>
+                        </div>
+                        
+                    </div>
+                </dev>
+            </div>
+        </div>
+
+        
+        <section class="w-full css-z8ikyh">
+            <div>
+                
+
+            </div>
+        </section>
+        
+        
+        
+        <footer class="css-1j19lrv">
+            
+            <div class="css-rzknn9">
+                
+                <div class="css-icidv2">
+                    
+                    <div class="css-tucx3n">
+                        
+                        <div class="css-1a7nq3w">
+                            
+                            <a href="{{url_for('index')}}" class="css-12lgscj">
+                                <img src="static/images/dhublogowhite.png"  class="css-1oo7mu6" />
+                            </a>
+                        </div>
+                        
+                        <div class="css-r7mjl8">
+                            <img    src="https://webimages.com/_com_assets/cms/kr6zmbrgbwlke2l97-atlas-global-deployments.svg?auto=format%252Ccompress" />
+                            
+                            <div class="css-1w1kq">
+                                <button role="button" type="button" aria-label="Language Selector" class="css-6ruvy3">
+                                    <span data-testid="selected-value"
+                                        class="css-1rtqzz6">English
+                                    </span>
+                                    
+                                    <div class="css-109dpaz">
+                                        
+                                        <svg data-testid="icon" width="16" height="9" viewBox="0 0 16 9"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg" class="css-1yzkxhp">
+                                            
+                                            <path d="M1.06689 0.799988L8.00023 7.73332L14.9336 0.799988"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="css-z2jj6c"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                                
+                                <div class="css-1700rf4">
+                                    
+                                    <ul data-testid="options" role="listbox" class="css-ac9zo2">
+                                        
+                                        <li role="option" tabIndex="0" class="css-naxvau">English</li>
+                                        <li role="option" tabIndex="0" class="css-naxvau">Português</li>
+                                        <li role="option" tabIndex="0" class="css-naxvau">Español</li>
+                                        <li role="option" tabIndex="0" class="css-naxvau">한국어</li>
+                                        <li role="option" tabIndex="0" class="css-naxvau">日本語</li>
+                                        <li role="option" tabIndex="0" class="css-naxvau">Italiano</li>
+                                        <li role="option" tabIndex="0" class="css-naxvau">Deutsch</li>
+                                        <li role="option" tabIndex="0" class="css-naxvau">Français</li>
+                                        <li role="option" tabIndex="0" class="css-naxvau">简体中文</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="css-148f6w8">© 2024 DecisionHub.</div>
+                </div>
+                
+                <div class="css-57n55j">
+                    
+                    <p class="css-of25nb">Home</p>
+                    
+                    <ul class="css-o17p1k">
+                        
+                        <li class="css-1w8osvb">
+                            <a href="#service" target="_self" rel="noreferrer noopener" class=" css-16ay36s">Services</a>
+                        </li>
+                        <li class="css-1w8osvb">
+                            <a href="{{url_for('about')}}" target="_self" rel="noreferrer noopener" class=" css-16ay36s">About</a>
+                        </li>
+                        <li class="css-1w8osvb">
+                            <a href="#faq" target="_self" rel="noreferrer noopener" class=" css-16ay36s">FAQ?</a>
+                        </li>
+                       
+                    </ul>
+                </div>
+                <div class="css-57n55j">
+                    <p class="css-of25nb">Support</p>
+                    <ul class="css-o17p1k">
+                        <li class="css-1w8osvb"><a href="{{url_for('dashboard')}}" target="_self"
+                                rel="noreferrer noopener" class=" css-16ay36s">Dashboard</a></li>
+                       
+                        <li class="css-1w8osvb"><a href="{{url_for('termsandservice')}}" target="_self" rel="noreferrer noopener"
+                                class=" css-16ay36s">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="css-57n55j">
+                    <p class="css-of25nb">Social</p>
+                    <ul class="css-o17p1k">
+                        <li class="css-1w8osvb">
+                            <a href="https://github.com/Abhishek-Mallick/Decision-Hub" target="_self" rel="noreferrer noopener"
+                                class=" css-16ay36s">
+                                
+                                <img
+                                    src="https://webimages.com/_com_assets/cms/kr6wrvghw9q75ytq1-github.svg?auto=format%252Ccompress"
+                                    alt class="css-1op5zr9" />GitHub
+                            </a>
+                        </li>
+                        <li class="css-1w8osvb"><a href="https://linktr.ee/decisionHub"
+                                target="_self" rel="noreferrer noopener" class=" css-16ay36s"><img
+                                    src="https://webimages.com/_com_assets/cms/kr6wsmr3g1ckzd0hs-linkedin.svg?auto=format%252Ccompress"
+                                    alt class="css-1op5zr9" />LinkedIn</a></li>
+                    </ul>
+                </div>
+                
+                <div class="css-1km7ddl">© 2024 DecisionHub.</div>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+
+
+</html>
