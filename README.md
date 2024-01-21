@@ -58,19 +58,30 @@ DecisionHub enables business analysts to instantly prototyping and execute sophi
 ## Architectural Diagram
 ![Decision-Hub drawio (3)](https://github.com/Abhishek-Mallick/Decision-Hub/assets/106394426/1d760f38-0111-4c47-889c-3f63a892fba2)
 
+## Webapp Preview
+<img src="preview/img1.png">
+<img src="preview/img2.png">
+<img src="preview/img3.png">
+<img src="preview/img4.png">
+<img src="preview/img5.png">
+<!-- <img src="preview/img6.png"> -->
+<img src="preview/img7.png">
+<img src="preview/img8.png">
+
 
 ## Contribution
 
 ```
-
 git clone https://github.com/Abhishek-Mallick/Decision-Hub
-
+```
+```
 cd Decision-Hub
-
+```
+```
 pip install -r requirements.txt
-
+```
+```
 flask run
-
 ```
 
 
